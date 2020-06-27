@@ -39,12 +39,8 @@ const EmailTo = ({ name = "emails", className }) => {
           />
         </div>
       </div>
-      <br />
-      {currentEmail}
-      <br />
-      {JSON.stringify(emails)}
-      <br />
       <input
+        hidden
         type="email"
         multiple
         name={name}
