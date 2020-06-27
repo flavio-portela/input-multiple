@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "outDir": "./build/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "allowJs": true
+  },
+  "include": [
+    "src"
+  ],
+  // Webpack will take care of compilation
+  "compileOnSave": false
+}

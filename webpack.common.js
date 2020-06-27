@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.ts",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "build"),
@@ -17,13 +17,26 @@ module.exports = {
       favicon: "public/favicon.ico",
     }),
   ],
+  resolve: {
+    extensions: [
+      '.js',
+      '.jsx',
+      '.tsx',
+      '.ts'
+    ]
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
+        use: "ts-loader",
         exclude: /node_modules/,
-        loader: "babel-loader",
       },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: "babel-loader",
+      // },
     ],
   },
 };
