@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import EmailItem from "./EmailItem";
+import EmailItem from "../EmailItem";
 import styles from "./EmailTo.styles";
 
 const EmailTo = ({ name = "emails", className }) => {
@@ -10,7 +10,7 @@ const EmailTo = ({ name = "emails", className }) => {
 
   return (
     <div className={className} css={styles}>
-      <div className="emailsInputContainer">
+      <div className="container">
         <div className="currentEmails">
           {emails.map((email) => {
             return (

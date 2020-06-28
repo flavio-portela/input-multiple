@@ -22,3 +22,6 @@
 Initial requirements suggested to add any text to the list. I disregarded that option because there's no point in including a bad email if the user will have to eventually fix it (or maybe we just ignore bad emails when submitting the form?).
 
 Also, allowing editing an email will considerably increase the complexity of this component.
+
+### Suggestions
+Display the added emails outside of the "input", when the list gets too big it becomes a problem because there is not enough space, specially for mobile.
