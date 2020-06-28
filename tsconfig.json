@@ -5,7 +5,7 @@
     "outDir": "./build/",
     "noImplicitAny": true,
     "module": "commonjs",
-    "allowJs": true
+    "allowJs": true,
   },
   "include": [
     "src"

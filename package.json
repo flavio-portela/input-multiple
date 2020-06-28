@@ -10,8 +10,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "tsc": "tsc"
+    "build": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
