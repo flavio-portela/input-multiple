@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import * as React from "react";
 import EmailItem from "../EmailItem";
 import styles from "./EmailTo.styles";
+const { useState } = React;
 
-const EmailTo = ({ name = "emails", className }) => {
+interface Props {
+  name?: string;
+  className?: string;
+}
+const EmailTo = ({ name = "emails", className }: Props) => {
   // List of addded emails
-  const [emails, setEmails] = useState([]);
+  const [emails, setEmails] = useState<Array<string>>([]);
   // Current email that the user is adding
   const [currentEmail, setCurrentEmail] = useState("");
 
@@ -50,11 +55,11 @@ const EmailTo = ({ name = "emails", className }) => {
     </div>
   );
 
-  function removeEmail(email) {
+  function removeEmail(email: string) {
     setEmails(emails.filter((mail) => mail !== email));
   }
 
-  function addEmail(e) {
+  function addEmail(e: React.KeyboardEvent<HTMLInputElement>) {
     e.preventDefault();
     // Check if we already have this email in the list
     if (emails.indexOf(currentEmail) >= 0) {
