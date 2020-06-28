@@ -5,9 +5,9 @@ import { Global } from "@emotion/core";
 import globalStyles from "./global.styles";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
     <Global styles={globalStyles} />
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </>,
+  document.getElementById("root") as HTMLElement
 );
