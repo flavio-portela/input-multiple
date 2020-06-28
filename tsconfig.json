@@ -4,7 +4,7 @@
     "jsx": "react",
     "outDir": "./build/",
     "noImplicitAny": true,
-    // "module": "commonjs",
+    "module": "commonjs",
     "allowJs": true
   },
   "include": [
